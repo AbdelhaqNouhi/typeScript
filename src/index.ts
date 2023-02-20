@@ -10,3 +10,29 @@ let arr: any[] = [1, 'nouhi', true]
 
 // Tuple
 let person: [number, string, boolean] = [1, 'anouhi', false]
+
+// Typel array 
+
+let employee: [number, string] []
+
+employee = [
+    [1, 'med'],
+    [2, 'brahim'],
+    [3, 'hala']
+]
+
+// Union 
+let ref: string | number
+
+ref = 33
+ref = '33'
+
+
+// functions
+function addnumber(x:number , y: number): number {
+    return x + y
+}
+
+console.log(addnumber(5, 6));
+
+
