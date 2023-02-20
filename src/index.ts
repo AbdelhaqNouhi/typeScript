@@ -36,3 +36,35 @@ function addnumber(x:number , y: number): number {
 console.log(addnumber(5, 6));
 
 
+// interface 
+interface UserInterface {
+    id: number
+    name: string
+    age?: number   // use ? to make optional
+}
+
+const user2: UserInterface = {
+    id: 1,
+    name: 'gaba',
+}
+
+
+interface MathFanc {
+    (x: number, y: number,): number
+}
+
+const add: MathFanc = (x: number, y: number): number => x + y
+const sub: MathFanc = (x: number, y: number): number => x + y
+
+// classes
+class Person {
+    id: number
+    name: string
+
+    constructor() {
+        console.log(11221);
+    }
+}
+
+const brad = new Person()
+const gaba = new Person()
