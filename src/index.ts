@@ -58,13 +58,45 @@ const sub: MathFanc = (x: number, y: number): number => x + y
 
 // classes
 class Person {
-    id: number
+    id: number 
     name: string
 
-    constructor() {
-        console.log(11221);
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
     }
 }
 
-const brad = new Person()
-const gaba = new Person()
+const brad = new Person(1, 'brad ziani')
+const mike = new Person(2, 'mike gaba')
+
+
+//  sub class 
+class Client extends Person {
+    point: string
+
+    constructor(id: number, name: string, point: string) {
+        super(id, name)
+        this.point = point
+    }
+}
+
+const p = new Client(3, 'abdelhaq', 'Developer')
+
+// console.log(p);
+
+
+// Generics
+function getArray<T>(items: T[]): T[] {
+    return new Array().concat(items)
+}
+
+let numArray = getArray<number>([1, 2, 3])
+let strArray = getArray<string>(['hala', 'gaba', 'nouhi'])
+
+numArray.push(8)
+
+console.log(numArray);
+
+
+

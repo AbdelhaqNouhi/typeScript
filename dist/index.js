@@ -33,9 +33,27 @@ const add = (x, y) => x + y;
 const sub = (x, y) => x + y;
 // classes
 class Person {
-    constructor() {
-        console.log(11221);
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
     }
 }
-const brad = new Person();
-const gaba = new Person();
+const brad = new Person(1, 'brad ziani');
+const mike = new Person(2, 'mike gaba');
+//  sub class 
+class Client extends Person {
+    constructor(id, name, point) {
+        super(id, name);
+        this.point = point;
+    }
+}
+const p = new Client(3, 'abdelhaq', 'Developer');
+// console.log(p);
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3]);
+let strArray = getArray(['hala', 'gaba', 'nouhi']);
+numArray.push(8);
+console.log(numArray);
